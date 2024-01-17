@@ -39,13 +39,8 @@
           # TODO!
           # ./net/vpn.nix
           # ./net/dns.nix
-          # ./net/network.nix
-          # ./net/openssh.nix
           # ./net/virtualisation.nix
           # ./net/firewall.nix
-          # ./net/users.nix
-          # ./core/bootloader.nix
-          # ./core/audio.nix
         ];
       };
     };

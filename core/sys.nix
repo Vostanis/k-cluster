@@ -2,7 +2,7 @@
 
 {
 
-  # Version Control
+  # NixOS Version
   system.stateVersion = "23.11";
 
   # Nix Configuration
@@ -15,6 +15,9 @@
   # Environment variables
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
+    ### TBC:
+    # environment.variables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    # environment.variables.OPENSSL_LIB_DIR = "/run/current-system/sw/bin/openssl";
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -41,19 +44,22 @@
     LC_PAPER = "en_GB.UTF-8";
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
-  };
+  };  
 
-  # Enable the X11 windowing system
-  services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
+  # X11
   services.xserver = {
+
+    # Enable windowing system
+    enable = true;
+
+    # Keymap config
     layout = "gb";
     xkbVariant = "";
+
+    # Enable GNOME Desktop Environment
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
   # Configure console keymap
