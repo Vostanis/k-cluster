@@ -25,25 +25,23 @@
           ./config/fonts_and_themes.nix
 
           # utility
+          ./util/cli.nix # git, curl, etc.
           ./util/software.nix # LibreOffice, TradingView, etc.
-          ./util/termware.nix # git, curl, etc.
 
           # global programming languages
           ./langs/rust.nix
 
           # core settings
-          ./core/sys.nix # SYSTEM   - Bootloader, TimeZone, Keyboard, OpenSSH
-          ./core/ext.nix # EXTERNAL - bluetooth, printers, etc.
+          ./core/sys.nix    # SYSTEM   - Bootloader, TimeZone, Keyboard, OpenSSH
+          ./core/ext.nix    # EXTERNAL - bluetooth, printers, etc.
+          ./core/audio.nix
 
           # network
-          ./net/network.nix
+          ./net/network.nix # TODO! include firewall, dns, vpn
           ./net/users.nix
 
           # TODO!
-          # ./net/vpn.nix
-          # ./net/dns.nix
           # ./net/virtualisation.nix
-          # ./net/firewall.nix
         ];
       };
     };
