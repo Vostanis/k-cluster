@@ -26,6 +26,9 @@ Working DEV host build - file structure as follows:
 
 # Known Issues
 1. Errors thrown on build do not specify paths; the file format may be too organised
+   e.g.  util/ => util.nix
+         net/ => net.nix
+         config/ => config.nix
 
 # TODO!
 - [x] Working host default NixOS config; refer [here](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles)
