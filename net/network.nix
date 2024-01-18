@@ -3,7 +3,7 @@
 {
   networking = {
     hostName = "cluster-host";
-    networkManager.enable = true;
+    networkmanager.enable = true;
  
     # Configure network proxy if necessary
     # networking.proxy.default = "http://user:password@proxy:port/";

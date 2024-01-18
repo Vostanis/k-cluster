@@ -14,8 +14,11 @@
     
     nixosConfigurations = {
       "admin-test" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        # system = "x86_64-linux";
         modules = [
+
+          # hardware
           ./hardware-configuration.nix
 
           # design & interface
