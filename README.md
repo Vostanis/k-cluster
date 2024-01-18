@@ -1,5 +1,6 @@
 # NixOS Config
 Working DEV host build - file structure as follows:
+```
   .
   |_  config
   |   |_  fonts_and_themes.nix
@@ -21,6 +22,7 @@ Working DEV host build - file structure as follows:
   |_  util
       |_  software.nix # list of standard software
       |_  termware.nix # CLI programmes (git, curl, etc.)
+```
 
 # Known Issues
 1. Errors thrown on build do not specify paths; the file format may be too organised
@@ -28,4 +30,4 @@ Working DEV host build - file structure as follows:
 # TODO!
 - [x] Working host default NixOS config
 - [ ] Set up default home env with home-manager (default .config files for tmux, kitty etc)
-- [ ] Set up cluster network; refer to https://github.com/hugolgst/nixos-raspberry-pi-cluster/blob/master/nixops/wireguard-server.nix
+- [ ] Set up cluster network; refer [here](https://github.com/hugolgst/nixos-raspberry-pi-cluster/blob/master/nixops/wireguard-server.nix)
