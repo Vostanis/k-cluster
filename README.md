@@ -1,12 +1,26 @@
 # NixOS Config
-Working DEV host setup in NixOS. The file structure (open to change) is as follows:
-```
-config  - configuration; fonts & themes currently, but home-manager to be added
-core    - system settings; bootloader, keyboard mapping. includes external device managament
-langs   - (global) programming languages; directory shell containers recommended within code workspaces
-net     - network; vpn, dns, (rpi) cluster all to be added
-util    - software and terminal programmes (a.k.a. termware)
-```
+Working DEV host build - file structure as follows:
+  .
+  |_  config
+  |   |_  fonts_and_themes.nix
+  |   ... (home-manager build to be added)
+  |
+  |_  core
+  |   |_  sys.nix # core system settings
+  |   |_  ext.nix # external devices; bluetooth, printers, etc.
+  |   |_  audio.nix
+  |
+  |_  langs
+  |   |_  rust.nix
+  |   |_  rust-toolchain.toml
+  |
+  |_  net
+  |   |_  network.nix
+  |   ...  (cluster build to be added; include vpn, dns, firewall)
+  |
+  |_  util
+      |_  software.nix # list of standard software
+      |_  termware.nix # CLI programmes (git, curl, etc.)
 
 # Known Issues
 1. Errors thrown on build do not specify paths; the file format may be too organised
