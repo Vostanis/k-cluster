@@ -21,7 +21,7 @@ Working DEV host build - file structure as follows:
   |
   |_  util
       |_  software.nix # list of standard software
-      |_  termware.nix # CLI programmes (git, curl, etc.)
+      |_  cli.nix # CLI programmes (git, curl, etc.)
 ```
 
 # Known Issues
