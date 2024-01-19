@@ -1,7 +1,8 @@
 # NixOS Config
 Working DEV host build - file structure as follows:
 ```
-  .
+  k-host/
+  |
   |_  config;       fonts & themes
   |                 ... (home-manager build to be added)
   |
