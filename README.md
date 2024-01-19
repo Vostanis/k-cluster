@@ -11,7 +11,7 @@ Working DEV host build - file structure as follows:
   |_  net;          vpn, dns, keys
   |                 ...  (cluster build to be added)
   |
-  |_  sys;         core system settings, external devices (bluetooth, printers), audio
+  |_  sys;          core system settings, external devices (bluetooth, printers), audio
   |
   |
   |_  util;         software & cli
