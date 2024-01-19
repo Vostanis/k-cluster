@@ -2,33 +2,22 @@
 Working DEV host build - file structure as follows:
 ```
   .
-  |_  config
-  |   |_  fonts_and_themes.nix
-  |   ... (home-manager build to be added)
+  |_  config;       fonts & themes
+  |                 ... (home-manager build to be added)
   |
-  |_  core
-  |   |_  sys.nix # core system settings
-  |   |_  ext.nix # external devices; bluetooth, printers, etc.
-  |   |_  audio.nix
+  |_  langs;        programming languages (and required toolchains)
   |
-  |_  langs
-  |   |_  rust.nix
-  |   |_  rust-toolchain.toml
+  |_  net;          vpn, dns, keys
+  |                 ...  (cluster build to be added)
   |
-  |_  net
-  |   |_  network.nix
-  |   ...  (cluster build to be added; include vpn, dns, firewall)
+  |_  sys;         core system settings, external devices (bluetooth, printers), audio
   |
-  |_  util
-      |_  software.nix # list of standard software
-      |_  cli.nix # CLI programmes (git, curl, etc.)
+  |
+  |_  util;         software & cli
 ```
 
 # Known Issues
-1. Errors thrown on build do not specify paths; the file format may be too organised
-   e.g.  util/ => util.nix
-         net/ => net.nix
-         config/ => config.nix
+1. Errors thrown on build do not specify paths
 
 # TODO!
 - [x] Working host default NixOS config; refer [here](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles)
