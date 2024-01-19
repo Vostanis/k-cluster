@@ -13,7 +13,6 @@ Working DEV host build - file structure as follows:
   |
   |_  sys;          core system settings, external devices (bluetooth, printers), audio
   |
-  |
   |_  util;         software & cli
 ```
 
