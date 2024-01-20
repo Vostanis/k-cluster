@@ -1,19 +1,25 @@
 # NixOS Config
 Working DEV host build - file structure as follows:
 ```
-  k-host/
+  host/
+  |
+  |_  bin;          software
   |
   |_  config;       fonts & themes
   |                 ... (home-manager build to be added)
   |
   |_  langs;        programming languages (and required toolchains)
   |
+  |_  lib;          terminal (& IDE), cli
+  |
   |_  net;          vpn, dns, keys
   |                 ...  (cluster build to be added)
   |
-  |_  sys;          core system settings, external devices (bluetooth, printers), audio
+  |_  sys;          core system settings, includes external devices & audio
   |
-  |_  util;         software & cli
+  |_  usrs;         users & groups
+
+  node/ ...
 ```
 
 # Known Issues
