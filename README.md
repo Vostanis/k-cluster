@@ -2,22 +2,22 @@
 Working DEV host build - file structure as follows:
 ```
   host/
-  |
-  |_  bin;          software
-  |
-  |_  config;       fonts & themes
-  |                 ... (home-manager build to be added)
-  |
-  |_  langs;        programming languages (and required toolchains)
-  |
-  |_  lib;          terminal (& IDE), cli
-  |
-  |_  net;          vpn, dns, keys
-  |                 ...  (cluster build to be added)
-  |
-  |_  sys;          core system settings, includes external devices & audio
-  |
-  |_  usrs;         users & groups
+    |
+    |__ bin;          software
+    |
+    |__ config;       fonts & themes
+    |                 ... (home-manager build to be added)
+    |
+    |__ langs;        programming languages (and required toolchains)
+    |
+    |__ lib;          terminal (& IDE), cli
+    |
+    |__ net;          vpn, dns, keys
+    |                 ...  (cluster build to be added)
+    |
+    |__ sys;          core system settings, includes external devices & audio
+    |
+    |__ usrs;         users & groups
 
   node/ ...
 ```
