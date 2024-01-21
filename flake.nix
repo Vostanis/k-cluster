@@ -13,7 +13,8 @@
   outputs = { self, nixpkgs, ... } @ inputs : {
 
       nixosConfigurations = {
-      "k-host" = nixpkgs.lib.nixosSystem {
+
+      "host" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
 
@@ -21,21 +22,21 @@
           ./hardware-configuration.nix
 
           # design & interface
-          ./config.nix
+          ./host/config.nix
 
-          # donwloads
-          ./lib.nix # packages; git, curl
-          ./bin.nix # software; LibreOffice, TradingView
+          # utility
+          ./host/lib.nix # packages; git, curl
+          ./host/bin.nix # software; LibreOffice, TradingView
 
           # global programming languages
-          ./langs/rust.nix
+          ./host/langs/rust.nix
 
           # core settings
-          ./sys.nix # system; includes external devices and audio
+          ./host/sys.nix # system; includes external devices and audio
 
           # network
-          ./net.nix # vpn, cluster
-          ./usrs.nix # users
+          ./host/net.nix # vpn, cluster
+          ./host/usrs.nix # users
 
         ];
       };
