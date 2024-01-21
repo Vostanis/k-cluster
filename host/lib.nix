@@ -14,6 +14,7 @@
     git
     curl
     vim
+    wireguard-tools
     neofetch
     ipfetch
     direnv
