@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
-{ 
-  nixpkgs.config.allowUnfree = true;
+{
 
+  # Software packages
+  nixpkgs.config.allowUnfree = true; 
   environment.systemPackages = with pkgs; [
 
     networkmanagerapplet # network manager
@@ -10,9 +11,9 @@
     teamviewer # comms
     tradingview # trading charts
 
-    # office software
+    # office
     libreoffice-qt
-    hunspell
+    hunspell # hunspell needed for autocorrect
     hunspellDicts.uk_UA
     hunspellDicts.th_TH
 

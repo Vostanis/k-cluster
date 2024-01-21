@@ -11,41 +11,33 @@
   };
 
   outputs = { self, nixpkgs, ... } @ inputs : {
-    
-    nixosConfigurations = {
-      "admin-test" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+
+      nixosConfigurations = {
+
+      "host" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
+
+          # hardware
           ./hardware-configuration.nix
 
           # design & interface
-          ./config/fonts_and_themes.nix
+          ./host/config.nix
 
           # utility
-          ./util/software.nix # LibreOffice, TradingView, etc.
-          ./util/termware.nix # git, curl, etc.
+          ./host/lib.nix # packages; git, curl
+          ./host/bin.nix # software; LibreOffice, TradingView
 
           # global programming languages
-          ./langs/rust.nix
+          ./host/langs/rust.nix
 
           # core settings
-          ./core/sys.nix # SYSTEM   - Bootloader, TimeZone, Keyboard, OpenSSH
-          ./core/ext.nix # EXTERNAL - bluetooth, printers, etc.
+          ./host/sys.nix # system; includes external devices and audio
 
           # network
-          ./net/network.nix
-          ./net/users.nix
+          ./host/net.nix # vpn, cluster
+          ./host/usrs.nix # users
 
-          # TODO!
-          # ./net/vpn.nix
-          # ./net/dns.nix
-          # ./net/network.nix
-          # ./net/openssh.nix
-          # ./net/virtualisation.nix
-          # ./net/firewall.nix
-          # ./net/users.nix
-          # ./core/bootloader.nix
-          # ./core/audio.nix
         ];
       };
     };
