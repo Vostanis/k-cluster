@@ -10,6 +10,9 @@
     starship  # icons
     lunarvim  # ide
 
+    # db
+    cassandra
+
     # cli
     git
     curl
@@ -25,4 +28,5 @@
     jq
 
   ];
+
 }

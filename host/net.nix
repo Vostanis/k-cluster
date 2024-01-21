@@ -1,14 +1,14 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   networking = {
 
-    hostName = "khost";
+    hostName = "k-cluster";
 
     ### network
     networkmanager.enable = true;
-    defaultGateway  = "192.168.1.1";
-    nameservers  = [ "8.8.8.8" ];
+    # defaultGateway  = "192.168.1.1";
+    # nameservers  = [ "8.8.8.8" ];
 
     ### nat 
     nat.enable = true;
