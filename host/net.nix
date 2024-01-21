@@ -4,6 +4,8 @@
   networking = {
 
     hostName = "k-cluster";
+    defaultGateway = "192.168.1.1";
+    nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
     ### network
     networkmanager.enable = true;
@@ -20,9 +22,11 @@
       enable = true;
       # - ports:
       #   25      SMTP (email)
-      #   53      DNS (domain names)
+      #   53      DNS
+      #   7000    Internode commes; Cassandra
+      #   9042    CQL; Cassandra
       #   51820   WireGuard
-      allowedTCPPorts = [ 25 53 ];
+      allowedTCPPorts = [ 25 53 7000 9042];
       allowedUDPPorts = [ 25 53 51820 ];
     };
 

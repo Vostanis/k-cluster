@@ -12,6 +12,7 @@
 
     # db
     cassandra
+    surrealdb
 
     # cli
     git
