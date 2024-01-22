@@ -7,7 +7,7 @@
   environment.systemPackages = with pkgs; [
 
     networkmanagerapplet # network manager
-    ungoogled-chromium # browser
+    firefox # browser
     teamviewer # comms
     tradingview # trading charts
 

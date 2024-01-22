@@ -9,9 +9,9 @@
     kitty     # emulator 
     starship  # icons
     lunarvim  # ide
+    emacs # doom version needed
 
     # db
-    cassandra
     surrealdb
 
     # cli
@@ -29,5 +29,4 @@
     jq
 
   ];
-
 }

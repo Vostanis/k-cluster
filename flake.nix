@@ -2,21 +2,32 @@
   description = "cluster admin";
 
   inputs = {
+    # core inputs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # overlays
     rust-overlay.url = "github:oxalica/rust-overlay";
+    emacs-overlay.url  = "github:nix-community/emacs-overlay";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs : {
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs : {
 
       nixosConfigurations = {
 
       "host" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
+
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPkgs = true;
+            home-manager.users.kimon = import /host/home.nix;
+          }
 
           # hardware
           ./hardware-configuration.nix
