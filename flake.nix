@@ -9,11 +9,11 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:nixos/nixos-hardware";
 
     # overlays
     rust-overlay.url = "github:oxalica/rust-overlay";
     emacs-overlay.url  = "github:nix-community/emacs-overlay";
-    nixos-hardware.url = "github:nixos/nixos-hardware";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs : {
@@ -43,12 +43,12 @@
           # global programming languages
           ./host/langs/rust.nix
 
-          # core settings
-          ./host/sys.nix # system; includes external devices and audio
+          # system settings
+          ./host/sys.nix # includes external devices and audio
 
           # network
           ./host/net.nix # vpn, cluster
-          ./host/usrs.nix # users
+          ./host/usrs.nix # user privileges
 
         ];
       };
