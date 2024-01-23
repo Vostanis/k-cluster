@@ -4,7 +4,7 @@
   home = {
     stateVersion = "23.11";
     username = "kimon";
-    homeDirectory = "/home/kimon";
+    # homeDirectory = "/home/kimon"; # conflicting with home-manager
     packages = with pkgs; [
 
       firefox # web

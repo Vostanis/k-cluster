@@ -48,7 +48,7 @@
 
           # network
           ./host/net.nix # vpn, cluster
-          # ./host/usrs.nix # users
+          ./host/usrs.nix # users
 
         ];
       };
