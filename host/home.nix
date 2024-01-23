@@ -2,7 +2,6 @@
 
 {
   
-  nixpkgs.config.allowUnfree = true;
   home = {
     stateVersion = "23.11";
     username = "kimon";
@@ -11,7 +10,7 @@
 
       firefox # web
       networkmanagerapplet # wifi
-      # teamviewer # comms
+      teamviewer # comms
       rstudio # r
 
       libreoffice-qt # office

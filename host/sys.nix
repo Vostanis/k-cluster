@@ -41,6 +41,7 @@
   # programs
   programs.dconf.enable = true; # config system
   programs.fish.enable = true; # terminal shell
+  nixpkgs.config.allowUnfree = true; # allow unfree software
 
   # bootloader
   boot.loader.systemd-boot.enable = true;
