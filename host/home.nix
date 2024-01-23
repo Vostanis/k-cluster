@@ -9,7 +9,7 @@
 
       firefox # web
       networkmanagerapplet # wifi
-      teamviewer # comms
+      # teamviewer # comms
       rstudio # r
 
       libreoffice-qt # office
