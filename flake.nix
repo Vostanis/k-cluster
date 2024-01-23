@@ -33,12 +33,11 @@
           # hardware
           ./hardware-configuration.nix
 
-          # design & interface
+          # fonts & theme
           ./host/config.nix
 
-          # utility
-          ./host/lib.nix # packages; git, curl
-          ./host/bin.nix # software; LibreOffice, TradingView
+          # command-line
+          ./host/cli.nix # git, curl
 
           # global programming languages
           ./host/langs/rust.nix
