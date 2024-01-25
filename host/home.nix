@@ -44,6 +44,9 @@
       shellIntegration.enableFishIntegration = true;
       shellIntegration.enableBashIntegration = true;
       theme = "shadotheme";
+      # theme = "Tokyo Night Moon";
+      # theme = "Hachiko";
+      # theme = "kanagawabones";
       font.name = "HackNerdFont-Regular";
     };
 
