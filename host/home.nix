@@ -1,13 +1,10 @@
 { pkgs, lib, ... }:
 
-with lib;
-
 {
-  
   home = {
     stateVersion = "23.11";
     username = "kimon";
-    packages = with pkgs; [  
+    packages = with pkgs; [
 
       kitty # term
       lunarvim # ide
@@ -41,8 +38,9 @@ with lib;
     kitty = {
       enable = true;
       shellIntegration.enableFishIntegration = true;
+      shellIntegration.enableBashIntegration = true;
       theme = "shadotheme";
-      font.name = "JetBrainsMono Medium";
+      font.name = "HackNerdFont-Regular";
     };
 
     starship = {
