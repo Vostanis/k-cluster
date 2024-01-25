@@ -31,6 +31,10 @@
       userEmail = "kimonvostanis@gmail.com";
     };
 
+    bash = {
+      enable = true;
+    };
+
     fish = {
       enable = true;
     };
