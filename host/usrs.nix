@@ -1,5 +1,8 @@
 { config, ... }:
 
 {
-  users.users.kimon.isNormalUser = true;
+  users.users.kimon= {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" ];
+  };
 }

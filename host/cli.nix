@@ -2,22 +2,14 @@
 
 {
 
-  # terminal & cli
+  # cli
   environment.systemPackages = with pkgs; [
-
-    # terminal
-    kitty     # emulator 
-    starship  # icons
-    lunarvim  # ide
-    emacs # doom version needed
-
-    # db
-    surrealdb
 
     # cli
     git
     curl
     vim
+    ripgrep
     wireguard-tools
     neofetch
     ipfetch

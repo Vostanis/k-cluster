@@ -1,12 +1,17 @@
-{ config, pkgs, ... }:
+{ pkgs, lib, ... }:
+
+with lib;
 
 {
   
   home = {
     stateVersion = "23.11";
     username = "kimon";
-    # homeDirectory = "/home/kimon"; # conflicting with home-manager
-    packages = with pkgs; [
+    packages = with pkgs; [  
+
+      kitty # term
+      lunarvim # ide
+      surrealdb # db
 
       firefox # web
       networkmanagerapplet # wifi
@@ -20,21 +25,42 @@
     ];
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true; # h-m can manage and install itself
 
-  programs.git = {
-    enable = true;
-    userName = "Vostanis";
-    userEmail = "kimonvostanis@gmail.com";
-  };
+    git = {
+      enable = true;
+      userName = "Vostanis";
+      userEmail = "kimonvostanis@gmail.com";
+    };
 
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: [
-      epkgs.nix-mode
-      epkgs.magit
-    ];
+    fish = {
+      enable = true;
+    };
+
+    kitty = {
+      enable = true;
+      shellIntegration.enableFishIntegration = true;
+      theme = "shadotheme";
+      font.name = "JetBrainsMono Medium";
+    };
+
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
+      # settings = {
+      #   git_branch = "\[[$symbol$branch]($style)\]";
+      #   git_status = "([\[$all_status$ahead_behind\]]($style))";
+      # };
+    };
+
+    emacs = {
+      enable = true; 
+      extraPackages = epkgs: [
+        epkgs.nix-mode
+        epkgs.magit
+      ];
+    };
   };
 
   services.gpg-agent = {
