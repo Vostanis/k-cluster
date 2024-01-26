@@ -9,6 +9,7 @@
       kitty # term
       lunarvim # ide
       surrealdb # db
+      # obsidian # notes
 
       firefox # web
       networkmanagerapplet # wifi
@@ -48,6 +49,7 @@
       # theme = "Hachiko";
       # theme = "kanagawabones";
       font.name = "HackNerdFont-Regular";
+      font.size = 14;
     };
 
     starship = {
