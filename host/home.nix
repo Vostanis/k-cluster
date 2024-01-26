@@ -49,7 +49,7 @@
       # theme = "Hachiko";
       # theme = "kanagawabones";
       font.name = "HackNerdFont-Regular";
-      font.size = 14;
+      font.size = 18;
     };
 
     starship = {
