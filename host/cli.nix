@@ -10,6 +10,7 @@
     curl
     vim
     ripgrep
+    jq
     wireguard-tools
     neofetch
     ipfetch
@@ -17,8 +18,8 @@
     htop
     btop
     pkg-config
+    docker
     docker-compose
-    jq
 
   ];
 }

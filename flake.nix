@@ -30,25 +30,16 @@
             home-manager.users.kimon = import ./host/home.nix;
           }
 
-          # hardware
           ./hardware-configuration.nix
 
-          # fonts & theme
-          ./host/config.nix
-
-          # command-line
-          ./host/cli.nix # git, curl
-
-          # global programming languages
-          ./host/langs/rust.nix
-
-          # system settings
+          ./host/conf.nix # fonts & themes
+          ./host/cli.nix
           ./host/sys.nix # includes external devices and audio
+          ./host/net.nix
+          ./host/usrs.nix
 
-          # network
-          ./host/net.nix # vpn, cluster
-          ./host/usrs.nix # user privileges
-
+          ./host/langs/docker.nix
+          ./host/langs/rust.nix
         ];
       };
     };

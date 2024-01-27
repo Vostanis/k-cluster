@@ -9,8 +9,6 @@
 
     ### network
     networkmanager.enable = true;
-    # defaultGateway  = "192.168.1.1";
-    # nameservers  = [ "8.8.8.8" ];
 
     ### nat 
     nat.enable = true;
@@ -23,14 +21,14 @@
       # - ports:
       #   25      SMTP (email)
       #   53      DNS
-      #   7000    Internode commes; Cassandra
-      #   9042    CQL; Cassandr
+      #   9042    CQL
       #   51820   WireGuard
       allowedTCPPorts = [ 25 53 7000 9042];
       allowedUDPPorts = [ 25 53 51820 ];
     };
 
     ### dns
+    # todo!
 
     ### vpn
     # # server
