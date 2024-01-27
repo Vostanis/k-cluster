@@ -24,7 +24,7 @@
       #   25      SMTP (email)
       #   53      DNS
       #   7000    Internode commes; Cassandra
-      #   9042    CQL; Cassandra
+      #   9042    CQL; Cassandr
       #   51820   WireGuard
       allowedTCPPorts = [ 25 53 7000 9042];
       allowedUDPPorts = [ 25 53 51820 ];
