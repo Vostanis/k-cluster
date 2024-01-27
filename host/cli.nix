@@ -19,6 +19,7 @@
     pkg-config
     docker-compose
     cassandra_4
+    mongodb
 
   ];
 }
