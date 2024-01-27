@@ -2,7 +2,6 @@
 
 {
 
-  # cli
   environment.systemPackages = with pkgs; [
 
     # cli
@@ -18,8 +17,8 @@
     htop
     btop
     pkg-config
-    docker
     docker-compose
+    cassandra_4
 
   ];
 }
