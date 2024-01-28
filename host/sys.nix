@@ -1,12 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   ### ENVIRONMENT VARIABLES ###
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
-    #PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
-    #OPENSSL_LIB_DIR = "/run/current-system/sw/bin/openssl";
+    PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    OPENSSL_LIB_DIR = "/run/current-system/sw/bin/openssl";
   };
 
   ### EXTERNALS ###

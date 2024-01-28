@@ -21,9 +21,9 @@
       # - ports:
       #   25      SMTP (email)
       #   53      DNS
-      #   9042    CQL
+      #   5984    CouchDB
       #   51820   WireGuard
-      allowedTCPPorts = [ 25 53 7000 9042];
+      allowedTCPPorts = [ 25 53 5984];
       allowedUDPPorts = [ 25 53 51820 ];
     };
 
