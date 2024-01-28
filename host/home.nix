@@ -42,12 +42,13 @@
       enable = true;
       shellIntegration.enableFishIntegration = true;
       shellIntegration.enableBashIntegration = true;
+      font.name = "HackNerdFont-Regular";
       theme = "shadotheme";
+      # theme = "Sea Shells";
       # theme = "Tokyo Night Moon";
       # theme = "Hachiko";
       # theme = "kanagawabones";
-      font.name = "HackNerdFont-Regular";
-      font.size = 18;
+      font.size = 15;
     };
 
     starship = {

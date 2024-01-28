@@ -10,6 +10,7 @@
     vim
     ripgrep
     jq
+    fd
     wireguard-tools
     neofetch
     ipfetch
@@ -18,8 +19,6 @@
     btop
     pkg-config
     docker-compose
-    cassandra_4
-    # mongodb
     couchdb3
 
   ];
