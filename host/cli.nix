@@ -18,6 +18,8 @@
     htop
     btop
     pkg-config
+    mdbook
+    mdbook-linkcheck
     docker-compose
     couchdb3
 

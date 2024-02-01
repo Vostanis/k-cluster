@@ -1,6 +1,6 @@
 [toolchain]
 channel = "nightly"
-components = [ "rust-src", "rust-analyzer", "rustc-codegen-cranelift", "miri", "llvm-tools", "rust-docs-json" ]
+components = [ "rust-src", "rust-analyzer", "rust-docs-json" ]
 targets = [
 "wasm32-unknown-unknown",
 "wasm32-wasi",
