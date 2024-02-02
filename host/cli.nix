@@ -20,6 +20,7 @@
     pkg-config
     mdbook
     mdbook-linkcheck
+    cargo-expand
     docker-compose
     couchdb3
 
