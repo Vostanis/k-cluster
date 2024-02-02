@@ -7,6 +7,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     OPENSSL_LIB_DIR = "/run/current-system/sw/bin/openssl";
+    DEFAULT_BROWSER = pkgs.firefox;
   };
 
   ### EXTERNALS ###
