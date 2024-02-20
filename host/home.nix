@@ -8,11 +8,13 @@
 
       kitty # term
       lunarvim # ide
+      vscode # ide
+      rstudio # r
 
       firefox # web
       networkmanagerapplet # wifi
       teamviewer # comms
-      rstudio # r
+      tradingview
 
       libreoffice-qt # office
       hunspell # autocorrect
