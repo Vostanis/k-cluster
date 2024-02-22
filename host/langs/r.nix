@@ -2,12 +2,14 @@
 
 {
     environment.systemPackages = with pkgs; [
-        R
-        rpackages.languageserver
-        rpackages.quandl
-        rpackages.couchDB
-        rpackages.ggplot2 
-        rpackages.dplyr 
-        rpackages.xts
+        
+        (rWrapper.override{ packages = with rPackages; [ 
+                languageserver
+                Quandl
+                ggplot2 
+                dplyr 
+                xts 
+            ];
+        })
     ];
 }
