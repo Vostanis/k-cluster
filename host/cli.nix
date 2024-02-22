@@ -22,7 +22,6 @@
     mdbook-linkcheck
     cargo-expand
     docker-compose
-    couchdb3
 
   ];
 }
