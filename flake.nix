@@ -13,7 +13,7 @@
 
     # overlays
     rust-overlay.url = "github:oxalica/rust-overlay";
-    emacs-overlay.url  = "github:nix-community/emacs-overlay";
+    # emacs-overlay.url  = "github:nix-community/emacs-overlay";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs : {
@@ -38,7 +38,9 @@
           ./host/net.nix
           ./host/usrs.nix
 
-          ./host/langs/docker.nix
+          # ./host/langs/docker.nix
+          ./host/langs/python.nix
+          ./host/langs/r.nix
           ./host/langs/rust.nix
         ];
       };
