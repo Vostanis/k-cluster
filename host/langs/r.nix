@@ -3,12 +3,19 @@
 {
     environment.systemPackages = with pkgs; [
         
-        (rWrapper.override{ packages = with rPackages; [ 
+        (rWrapper.override { packages = with rPackages; [ 
+
+                # core
                 languageserver
-                Quandl
                 ggplot2 
                 dplyr 
-                xts 
+                xts
+
+                # finance
+                Quandl
+                quantmod
+                TTR
+                PerformanceAnalytics
             ];
         })
     ];
