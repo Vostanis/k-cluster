@@ -3,7 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
         
-        (rWrapper.override { packages = with rPackages; [ 
+        (rstudioWrapper.override { packages = with rPackages; [ 
 
                 # core
                 languageserver

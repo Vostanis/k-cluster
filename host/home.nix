@@ -9,7 +9,7 @@
       kitty # term
       lunarvim # ide
       vscode # ide
-      rstudio # r
+      # rstudio # r
 
       firefox # web
       networkmanagerapplet # wifi
