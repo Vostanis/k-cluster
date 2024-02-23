@@ -14,6 +14,7 @@
             zipfile2
             yfinance
             dash
+            radian
     ]))
   ];
 }
