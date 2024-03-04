@@ -10,6 +10,8 @@
                 ggplot2 
                 dplyr 
                 xts
+                httr # HTTP requests
+                httpgd # graphics for VS Code
 
                 # finance
                 Quandl

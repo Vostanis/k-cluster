@@ -56,18 +56,6 @@
     starship = {
       enable = true;
       enableFishIntegration = true;
-      # settings = {
-      #   git_branch = "\[[$symbol$branch]($style)\]";
-      #   git_status = "([\[$all_status$ahead_behind\]]($style))";
-      # };
-    };
-
-    emacs = {
-      enable = true; 
-      extraPackages = epkgs: [
-        epkgs.nix-mode
-        epkgs.magit
-      ];
     };
   };
 

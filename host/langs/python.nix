@@ -13,8 +13,12 @@
             requests
             zipfile2
             yfinance
-            dash
-            radian
+            scipy
+            tensorflow
+            scrapy
+            beautifulsoup4
+            dash # dashboarding
+            radian # R terminal in VS code
     ]))
   ];
 }
