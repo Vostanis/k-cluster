@@ -11,12 +11,17 @@
             matplotlib
             seaborn
             requests
+            datetime
             zipfile2
             yfinance
+            aiohttp
+
             scipy
             tensorflow
+            keras
             scrapy
             beautifulsoup4
+
             dash # dashboarding
             radian # R terminal in VS code
     ]))

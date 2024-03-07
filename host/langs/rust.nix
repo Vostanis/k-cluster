@@ -11,5 +11,6 @@
     cargo
     gcc # linker
     lldb_16
+    evcxr # jupyter notebook integration
   ];
 }
