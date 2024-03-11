@@ -15,6 +15,8 @@
             zipfile2
             yfinance
             aiohttp
+            progressbar
+            tqdm
 
             scipy
             tensorflow

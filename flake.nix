@@ -38,7 +38,7 @@
           ./host/net.nix
           ./host/usrs.nix
 
-          # ./host/langs/docker.nix
+          ./host/langs/docker.nix
           ./host/langs/python.nix
           ./host/langs/r.nix
           ./host/langs/rust.nix
