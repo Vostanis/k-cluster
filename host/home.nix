@@ -46,11 +46,14 @@
       shellIntegration.enableBashIntegration = true;
       font.name = "HackNerdFont-Regular";
       theme = "shadotheme";
-      # theme = "Sea Shells";
+      # theme = "Afterglow";
       # theme = "Tokyo Night Moon";
       # theme = "Hachiko";
       # theme = "kanagawabones";
       font.size = 15;
+      settings = {
+        background_opacity = "0.5";
+      };
     };
 
     starship = {

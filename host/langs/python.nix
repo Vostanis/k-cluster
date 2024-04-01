@@ -18,11 +18,14 @@
             progressbar
             tqdm
 
+            flask
             scipy
             tensorflow
             keras
+            sentence-transformers
             scrapy
             beautifulsoup4
+            sklearn-deap
 
             dash # dashboarding
             radian # R terminal in VS code
