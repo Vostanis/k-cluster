@@ -20,9 +20,8 @@
 
             flask
             scipy
-            tensorflow
-            keras
-            sentence-transformers
+            torch
+            torchvision
             scrapy
             beautifulsoup4
             sklearn-deap
