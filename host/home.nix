@@ -9,12 +9,12 @@
       kitty # term
       lunarvim # ide
       vscode # ide
-      # rstudio # r
 
       firefox # web
       networkmanagerapplet # wifi
       teamviewer # comms
       tradingview
+      etcher # ISO images
 
       libreoffice-qt # office
       hunspell # autocorrect
