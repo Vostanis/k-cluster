@@ -23,5 +23,6 @@
     cargo-expand
     docker-compose
 
+    etcher # ISO images
   ];
 }
