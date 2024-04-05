@@ -39,7 +39,6 @@
           ./host/usrs.nix
 
           # langs
-          ./host/langs/cpp.nix
           ./host/langs/docker.nix
           ./host/langs/python.nix
           ./host/langs/r.nix
