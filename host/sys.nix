@@ -10,6 +10,11 @@
     DEFAULT_BROWSER = pkgs.firefox;
   };
 
+  # electron-19.1.9 is End Of Life (EOL)
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-19.1.9"
+  ];
+
   ### EXTERNALS ###
   # bluetooth
   hardware.bluetooth.enable = true;

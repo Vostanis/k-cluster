@@ -45,10 +45,6 @@
           ./host/langs/rust.nix
         ];
       };
-
-      nixpkgs.config.permittedInsecurePackages = [
-        "electron-19.1.9"
-      ];
     };
   };
 }
