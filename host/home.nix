@@ -9,7 +9,6 @@
       kitty # term
       lunarvim # ide
       vscode # ide
-      quarto
 
       firefox # web
       networkmanagerapplet # wifi
