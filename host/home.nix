@@ -12,7 +12,7 @@
 
       firefox # web
       networkmanagerapplet # wifi
-      teamviewer # comms
+      teamviewer
       tradingview
 
       libreoffice-qt # office
@@ -43,16 +43,10 @@
       enable = true;
       shellIntegration.enableFishIntegration = true;
       shellIntegration.enableBashIntegration = true;
-      font.name = "HackNerdFont-Regular";
-      theme = "shadotheme";
-      # theme = "Afterglow";
-      # theme = "Tokyo Night Moon";
-      # theme = "Hachiko";
-      # theme = "kanagawabones";
-      font.size = 15;
-      settings = {
-        background_opacity = "0.5";
-      };
+      font.name = "JetBrains Mono";
+      # theme = "shadotheme";
+      theme = "Gruvbox Material Dark Soft";
+      font.size = 10;
     };
 
     starship = {
