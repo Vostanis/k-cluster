@@ -3,8 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
 
-    (python3.withPackages(ps: with ps; [
-            # core packages
+    (python311.withPackages(ps: with ps; [
             jupyter
             numpy
             pandas
@@ -17,6 +16,8 @@
             aiohttp
             progressbar
             tqdm
+            pyreadstat
+            networkx
 
             flask
             scipy
@@ -24,10 +25,21 @@
             torchvision
             scrapy
             beautifulsoup4
+            scikit-learn
             sklearn-deap
+            statsmodels
+            niaarm
+            psycopg2
+            sqlalchemy
+            stanza
+            graphviz
+            xgboost
 
+            altair
             dash # dashboarding
             radian # R terminal in VS code
+            
+            openpyxl
     ]))
   ];
 }

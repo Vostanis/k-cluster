@@ -3,7 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
         
-        (rstudioWrapper.override { packages = with rPackages; [ 
+        (rWrapper.override { packages = with rPackages; [ 
 
                 # core
                 languageserver
@@ -18,6 +18,10 @@
                 quantmod
                 TTR
                 PerformanceAnalytics
+                tidyverse
+                datarium
+                depmixS4
+                reticulate
             ];
         })
     ];

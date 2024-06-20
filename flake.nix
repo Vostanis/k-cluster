@@ -1,5 +1,5 @@
 {
-  description = "cluster admin";
+  description = "cluster; to include local VPN and Postgres virtual host";
 
   inputs = {
 
@@ -13,7 +13,13 @@
 
     # overlays
     rust-overlay.url = "github:oxalica/rust-overlay";
-    # emacs-overlay.url  = "github:nix-community/emacs-overlay";
+
+    # nixvim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs : {
@@ -31,18 +37,18 @@
           }
 
           ./hardware-configuration.nix
+          ./host
+          # ./host/conf.nix # fonts & themes
+          # ./host/cli.nix
+          # ./host/sys.nix # includes external devices and audio
+          # ./host/net.nix
+          # ./host/usrs.nix
 
-          ./host/conf.nix # fonts & themes
-          ./host/cli.nix
-          ./host/sys.nix # includes external devices and audio
-          ./host/net.nix
-          ./host/usrs.nix
-
-          # langs
-          ./host/langs/docker.nix
-          ./host/langs/python.nix
-          ./host/langs/r.nix
-          ./host/langs/rust.nix
+          # # langs
+          # ./host/langs/docker.nix
+          # ./host/langs/python.nix
+          # ./host/langs/r.nix
+          # ./host/langs/rust.nix
         ];
       };
     };

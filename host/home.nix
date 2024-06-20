@@ -14,6 +14,7 @@
       networkmanagerapplet # wifi
       teamviewer
       tradingview
+      pgadmin
 
       libreoffice-qt # office
       hunspell # autocorrect

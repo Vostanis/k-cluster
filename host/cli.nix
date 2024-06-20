@@ -22,6 +22,7 @@
     mdbook-linkcheck
     cargo-expand
     docker-compose
+    postgresql
 
     # etcher # ISO images
   ];
