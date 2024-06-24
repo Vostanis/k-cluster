@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -15,31 +15,12 @@
             yfinance
             aiohttp
             progressbar
-            tqdm
-            pyreadstat
-            networkx
 
-            flask
-            scipy
             torch
             torchvision
-            scrapy
-            beautifulsoup4
             scikit-learn
-            sklearn-deap
-            statsmodels
-            niaarm
             psycopg2
-            sqlalchemy
-            stanza
-            graphviz
             xgboost
-
-            altair
-            dash # dashboarding
-            radian # R terminal in VS code
-            
-            openpyxl
     ]))
   ];
 }

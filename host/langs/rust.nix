@@ -9,7 +9,7 @@
     rustc
     rustup
     cargo
-    gcc # linker
+    gcc
     lldb_16
   ];
 }
