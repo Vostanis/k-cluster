@@ -9,6 +9,7 @@
             home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
+		backupFileExtension = "backup";
                 users.kimon.imports = [ ../users/kimon/home ];
                 extraSpecialArgs.inputs = inputs;
             };

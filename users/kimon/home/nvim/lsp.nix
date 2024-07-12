@@ -28,6 +28,7 @@
           rust-analyzer.enable = true;
           sqls.enable = true;
           taplo.enable = true;
+	  zls.enable = true;
         };
       };
     };

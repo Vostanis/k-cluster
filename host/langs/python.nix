@@ -15,6 +15,7 @@
             yfinance
             aiohttp
             progressbar
+            openpyxl
 
             torch
             torchvision
