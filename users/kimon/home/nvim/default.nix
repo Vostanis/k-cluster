@@ -1,10 +1,9 @@
 {
   imports = [
     ./barbar.nix
-    # ./cmp.nix
+    ./cmp.nix
     ./comment.nix
     ./dashboard.nix
-    # ./harpoon.nix
     ./keymappings.nix
     ./lsp.nix
     ./markdown-preview.nix
@@ -43,23 +42,66 @@
 	    number = true;
     };
 
+    # clipboard.register = "unnamed_plus";
+    clipboard.providers.wl-copy.enable = true;
+
     # small plugins
     plugins = {
       bufferline.enable = true;
+      copilot-chat = {
+      	enable = true;
+	settings.window = {
+		layout = "float";
+		border = "rounded";
+		width = 0.95;
+		height = 0.90;
+		title = "copilot";
+	};
+	settings.mappings = {
+	  open = {
+	    insert = "<C-k>";
+	    normal = "<C-k>";
+	  };
+	};
+	settings.show_help = false;
+      };
       floaterm = {
         enable = true;
-        width = 0.85;
-        height = 0.85;
-        title = "terminal";
+        width = 0.95;
+        height = 0.95;
         keymaps.toggle = "<leader>,";
       };
+      fidget.enable = true;
       jupytext.enable = true;
       lightline.enable = true;
+      ollama.enable = true;
+      treesitter.enable = true;
+      intellitab.enable = true;
+      smart-splits = {
+      	enable = true;
+	settings = {
+	  ignored_events = [
+	    "BufEnter"
+	    "WinEnter"
+	  ];
+	  resize_mode = {
+	    quit_key = "<ESC>";
+	    resize_keys = [
+	      "h"
+	      "j"
+	      "k"
+	      "l"
+	    ];
+	    silent = true;
+	  };
+	};
+      };
       toggleterm = {
         enable = true;
         settings.open_mapping = "[[<C-t>]]";
       };
       which-key.enable = true;
+      zen-mode.enable = true;
     };
   };
 }

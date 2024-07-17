@@ -53,10 +53,10 @@
 	enableBashIntegration = true;
     };
 
-    starship = {
-      enable = true;
-      enableFishIntegration = true;
-    };
+    # starship = {
+    #   enable = true;
+    #   enableFishIntegration = true;
+    # };
   };
 
   services.gpg-agent = {
