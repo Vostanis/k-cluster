@@ -37,26 +37,25 @@
       shellIntegration.enableFishIntegration = true;
       shellIntegration.enableBashIntegration = true;
       font.name = "JetBrains Mono";
-      # theme = "shadotheme";
-      theme = "Gruvbox Material Dark Soft";
-      font.size = 16;
-#      settings = {
-#	background_opacity = 0.85;
-#      };
+      theme = "shadotheme";
+      # theme = "Gruvbox Material Dark Soft";
+      font.size = 10;
+      settings = {
+	background_opacity = "0.85";
+	remember_window_size = "yes";
+	intial_window_width = "100c";
+	initial_window_height = "50c";
+	enable_layouts = "tall, fall, horizontal, grid";
+      };
       keybindings = {
 	"ctrl+x" = "fg";
       };
     };
 
-    wezterm = {
-	enable = true;
-	enableBashIntegration = true;
+    atuin = {
+      enable = true;
+      enableFishIntegration = true;	
     };
-
-    # starship = {
-    #   enable = true;
-    #   enableFishIntegration = true;
-    # };
   };
 
   services.gpg-agent = {

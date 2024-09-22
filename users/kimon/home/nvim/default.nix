@@ -73,29 +73,30 @@
       };
       fidget.enable = true;
       jupytext.enable = true;
+      molten.enable = true;
       lightline.enable = true;
-      ollama.enable = true;
       treesitter.enable = true;
       intellitab.enable = true;
       smart-splits = {
       	enable = true;
-	settings = {
-	  ignored_events = [
-	    "BufEnter"
-	    "WinEnter"
-	  ];
-	  resize_mode = {
-	    quit_key = "<ESC>";
-	    resize_keys = [
-	      "h"
-	      "j"
-	      "k"
-	      "l"
-	    ];
-	    silent = true;
-	  };
-	};
+		settings = {
+			ignored_events = [
+				"BufEnter"
+				"WinEnter"
+			];
+			resize_mode = {
+				quit_key = "<ESC>";
+				resize_keys = [
+				"h"
+				"j"
+				"k"
+				"l"
+				];
+				silent = true;
+			};
+		};
       };
+      transparent.enable = true;
       toggleterm = {
         enable = true;
         settings.open_mapping = "[[<C-t>]]";

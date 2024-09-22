@@ -22,6 +22,7 @@
     cargo-expand
     docker-compose
     postgresql
+    trunk
 
     # etcher # ISO images
   ];

@@ -7,8 +7,11 @@
             jupyter
             numpy
             pandas
-            matplotlib
+
             seaborn
+            plotly
+            dash
+
             requests
             datetime
             zipfile2

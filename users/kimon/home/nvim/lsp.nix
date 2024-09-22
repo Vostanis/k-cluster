@@ -1,6 +1,8 @@
 {
   programs.nixvim = {
     plugins = {
+      lsp-format.enable = true;
+      lsp-format.lspServersToEnable = ["rust-analyzer"];
       lsp = {
         enable = true;
 
@@ -25,7 +27,15 @@
         servers = {
           nixd.enable = true;
           pylsp.enable = true;
-          rust-analyzer.enable = true;
+          rust-analyzer = {
+	  	enable = true;
+		installCargo = true;
+		installRustc = true;
+        	settings = {
+          	  cargo.features = "all";
+		  inlayHints.typeHints.enable = true;
+        	};
+	  };
           sqls.enable = true;
           taplo.enable = true;
 	  zls.enable = true;

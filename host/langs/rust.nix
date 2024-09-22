@@ -11,5 +11,6 @@
     cargo
     gcc
     lldb_16
-  ];
+    bacon
+  ]; 
 }

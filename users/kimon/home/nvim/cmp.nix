@@ -11,7 +11,6 @@
           yaml = false;
           markdown = false;
           help = false;
-          gleam = false; # Copilot doesn't really help when writing Gleam
           gitcommit = false;
           gitrebase = false;
           hgcommit = false;
