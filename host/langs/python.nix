@@ -7,6 +7,8 @@
             jupyter
             numpy
             pandas
+            polars
+            sqlalchemy
 
             seaborn
             plotly
@@ -15,15 +17,12 @@
             requests
             datetime
             zipfile2
-            yfinance
             aiohttp
-            progressbar
             openpyxl
 
             torch
             torchvision
             scikit-learn
-            psycopg2
             xgboost
     ]))
   ];

@@ -2,10 +2,13 @@
 
 {
   environment.systemPackages = with pkgs; [
-    rstudioWrapper
-    (rstudioWrapper.override{ packages = with rPackages; [ 
+    psqlodbc
+    rstudio
+    rWrapper
+    (rWrapper.override{ packages = with rPackages; [ 
         ggplot2 
         dplyr 
+	      dbplyr
         xts 
         tidyverse 
         xgboost

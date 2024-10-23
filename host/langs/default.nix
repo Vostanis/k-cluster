@@ -1,9 +1,10 @@
 {
     imports = [
         ./docker.nix
+	# ./javascript.nix
         ./python.nix
-        ./rstudio.nix
+        # ./rstudio.nix
         ./rust.nix
-	    ./zig.nix
+    	./zig.nix
     ];
 }

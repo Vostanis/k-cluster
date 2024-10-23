@@ -7,8 +7,10 @@
     packages = with pkgs; [
       kitty # terminal
       lunarvim # terminal ide
-      vscode # gui ide
+      # vscode # gui ide
+      vscodium
       firefox # web browser
+      brave
       networkmanagerapplet # wifi
       teamviewer # comms
       tradingview # trading
@@ -37,8 +39,9 @@
       shellIntegration.enableFishIntegration = true;
       shellIntegration.enableBashIntegration = true;
       font.name = "JetBrains Mono";
-      theme = "shadotheme";
-      # theme = "Gruvbox Material Dark Soft";
+      # font.name = "Tinos Nerd Font";
+      # theme = "shadotheme";
+      theme = "Gruvbox Material Dark Soft";
       font.size = 10;
       settings = {
 	background_opacity = "0.85";

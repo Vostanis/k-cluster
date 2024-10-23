@@ -25,7 +25,7 @@
 		  base05 = "#bcb28d"; # Default foreground
 		  base06 = "#eee8d5"; # Light foreground
 		  base07 = "#fdf6e3"; # Light background
-		  base08 = "#E6844F"; # Variables, tags
+		  base08 = "#E6844F"; # ORANGE
 		  base09 = "#58b2dc"; # Integers, Boolean, constants
 		  base0A = "#DDA52D"; # Classes, markup bold
 		  base0B = "#66A866"; # Strings
