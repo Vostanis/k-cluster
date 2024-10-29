@@ -1,16 +1,20 @@
 { inputs, pkgs, ... }:
 
 {
-  # Apply the overlay to the package set
-  nixpkgs.overlays = [
-    inputs.rust-overlay.overlays.default
-  ];
+  nixpkgs.overlays = [ inputs.rust-overlay.overlays.default ];
 
   environment.systemPackages = with pkgs; [
 
-    # rust
     (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
     rustc
-    gcc # linker for rust
-  ];
+    rustup
+    cargo
+    gcc
+    lldb_16
+    bacon
+
+    nodejs_22
+    nodePackages.ts-node
+    typescript
+  ]; 
 }

@@ -4,11 +4,11 @@
   networking = {
 
     hostName = "k-cluster";
+    defaultGateway = "192.168.1.1";
+    nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
     ### network
     networkmanager.enable = true;
-    # defaultGateway  = "192.168.1.1";
-    # nameservers  = [ "8.8.8.8" ];
 
     ### nat 
     nat.enable = true;
@@ -20,13 +20,15 @@
       enable = true;
       # - ports:
       #   25      SMTP (email)
-      #   53      DNS (domain names)
+      #   53      DNS
+      #   5984    CouchDB
       #   51820   WireGuard
-      allowedTCPPorts = [ 25 53 ];
+      allowedTCPPorts = [ 25 53 5984];
       allowedUDPPorts = [ 25 53 51820 ];
     };
 
     ### dns
+    # todo!
 
     ### vpn
     # # server

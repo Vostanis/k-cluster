@@ -1,45 +1,44 @@
 {
-  description = "cluster admin";
+  description = "
+                         █████          ███    █████         ███
+                        ░░███          ███    ░░███         ░░███
+   ████████   ██████  ███████  ██████ ███      ░███ █████    ░░███
+  ░░███░░███ ███░░██████░░███ ███░░██░███      ░███░░███      ░███
+   ░███ ░███░███ ░██░███ ░███░███████░███      ░██████░       ░███
+   ░███ ░███░███ ░██░███ ░███░███░░░ ░░███     ░███░░███      ███
+   ████ ████░░██████░░███████░░██████ ░░███    ████ █████    ██░
+  ░░░░ ░░░░░ ░░░░░░  ░░░░░░░░ ░░░░░░   ░░░    ░░░░ ░░░░░    ░░░
+
+  cluster of nodes, pivoted on some host;
+    e.g.,
+      host(kimon)
+       |_ node(VPN)
+       |_ node(PostgreSQL)
+       |_ node(CUDA)
+  ";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
     rust-overlay.url = "github:oxalica/rust-overlay";
-  };
-
-  outputs = { self, nixpkgs, ... } @ inputs : {
-
-      nixosConfigurations = {
-
-      "host" = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-
-          # hardware
-          ./hardware-configuration.nix
-
-          # design & interface
-          ./host/config.nix
-
-          # utility
-          ./host/lib.nix # packages; git, curl
-          ./host/bin.nix # software; LibreOffice, TradingView
-
-          # global programming languages
-          ./host/langs/rust.nix
-
-          # core settings
-          ./host/sys.nix # system; includes external devices and audio
-
-          # network
-          ./host/net.nix # vpn, cluster
-          ./host/usrs.nix # users
-
-        ];
-      };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # url = "github:mikaelfangel/nixvim-config";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs = { self, flake-parts, nixpkgs, ... } @ inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = nixpkgs.lib.systems.flakeExposed;
+      imports = [ ./flake ];
+    };
 }
