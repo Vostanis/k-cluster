@@ -3,6 +3,6 @@
 {
   users.users.kimon= {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "audio" "vboxusers" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "vboxusers" "libvirtd" ];
   };
 }

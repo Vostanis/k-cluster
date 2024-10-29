@@ -8,7 +8,8 @@
             numpy
             pandas
             polars
-            sqlalchemy
+            sqlalchemy # psycopg2 is a dependency of sqlalchemy
+            psycopg2
 
             seaborn
             plotly

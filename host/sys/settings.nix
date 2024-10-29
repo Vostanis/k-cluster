@@ -11,6 +11,18 @@
   };
 
   ### EXTERNALS ###
+  # graphics
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+    	vpl-gpu-rt
+    ];
+  };
+
+  services.xserver = {
+    videoDrivers = [ "intel" ]; # or "intel" or "amd" depending on your hardware
+  };
+
   # bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
