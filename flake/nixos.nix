@@ -1,5 +1,9 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+
+{
   flake.nixosConfigurations = {
+
+    # host:desktop deployment
     k-cluster = inputs.nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs.inputs = inputs;

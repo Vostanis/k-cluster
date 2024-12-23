@@ -8,6 +8,5 @@
       };
     };
     extraSpecialArgs.inputs = inputs;
-    # modules = [ ../users/kimon/home ];
   };
 }

@@ -2,10 +2,9 @@
     imports = [
         ./home-manager.nix
         ./nixos.nix
-        # ../host
     ];
 
-    perSystem = {pkgs, ...}: {
+    perSystem = { pkgs, ... }: {
         formatter = pkgs.alejandra;
     };
 }

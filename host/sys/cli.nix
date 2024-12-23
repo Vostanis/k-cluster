@@ -2,8 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-
-    # cli
     git
     curl
     vim
@@ -26,8 +24,6 @@
     steam
     trunk
     pavucontrol
-
-    # etcher # ISO images
   ];
 
   programs.steam = {

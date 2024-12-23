@@ -7,7 +7,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     OPENSSL_LIB_DIR = "/run/current-system/sw/bin/openssl";
-    DEFAULT_BROWSER = pkgs.firefox;
+    DEFAULT_BROWSER = pkgs.brave;
   };
 
   ### EXTERNALS ###
@@ -17,10 +17,6 @@
     extraPackages = with pkgs; [
     	vpl-gpu-rt
     ];
-  };
-
-  services.xserver = {
-    videoDrivers = [ "intel" ]; # or "intel" or "amd" depending on your hardware
   };
 
   # bluetooth
@@ -82,6 +78,7 @@
   services.xserver = {
     # Enable windowing system
     enable = true;
+    videoDrivers = [ "intel" ]; 
 
     # Keymap config
     layout = "gb";

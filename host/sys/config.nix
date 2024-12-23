@@ -12,22 +12,18 @@
   
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.displayManager.defaultSession = "none+i3";
   services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.windowManager.i3.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  virtualisation.virtualbox.guest.enable = true;
-
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
 
   # Enable Theme
   environment.variables.GTK_THEME = "Catppuccin-Macchiato-Standard-Teal-Dark";
   environment.variables.XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
   environment.variables.XCURSOR_SIZE = "24";
   console = {
-    earlySetup = true;
+    earlySetup = false;
     colors = [
       "24273a"
       "ed8796"
@@ -55,10 +51,6 @@
       accents = [ "teal" ]; # You can specify multiple accents here to output multiple themes 
       size = "standard";
       variant = "macchiato";
-    };
-    discord = pkgs.discord.override {
-      withOpenASAR = true;
-      withTTS = true;
     };
   };
 

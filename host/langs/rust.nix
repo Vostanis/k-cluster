@@ -12,9 +12,5 @@
     gcc
     lldb_16
     bacon
-
-    nodejs_22
-    nodePackages.ts-node
-    typescript
   ]; 
 }

@@ -17,7 +17,8 @@
 	    base16 = {
 		enable = true;
 		colorscheme = {
-		  base00 = "#1f2023"; # Background
+		  # base00 = "#1f2023"; # Background
+		  base00 = "#0b0b0e"; # Background
 		  base01 = "#282b31"; # Lighter background
 		  base02 = "#2c5a65"; # Selection background
 		  base03 = "#43474c"; # Comments, invisibles

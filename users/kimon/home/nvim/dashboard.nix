@@ -5,7 +5,7 @@
 	    change_to_vcs_root = true;
 	    config = {
 	      footer = [
-		"- - + - -"
+		">>>>>>> | <<<<<<<"
 	      ];
 	      header = [
 			"  ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆        "

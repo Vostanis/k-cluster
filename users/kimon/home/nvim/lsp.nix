@@ -26,7 +26,7 @@
 
         servers = {
           nixd.enable = true;
-          pylsp.enable = true;
+          pyright.enable = true;
           rust-analyzer = {
 	  	enable = true;
 		installCargo = true;
